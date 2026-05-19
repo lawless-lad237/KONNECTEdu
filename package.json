@@ -1,0 +1,27 @@
+{
+  "name": "agency-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A full-featured agency management OS built with Directus and Nuxt.",
+  "scripts": {
+    "dev": "pnpm run dev:directus & pnpm run dev:nuxt",
+    "dev:nuxt": "pnpm --dir nuxt dev",
+    "dev:directus": "docker compose -f directus/docker-compose.yaml up",
+    "start:directus": "docker compose -f directus/docker-compose.yaml up -d",
+    "stop:directus": "docker compose -f directus/docker-compose.yaml down",
+    "build:nuxt": "pnpm --dir nuxt build",
+    "install:nuxt": "pnpm --dir nuxt install"
+  },
+  "directus:template": {
+    "name": "AgencyOS",
+    "description": "A full-featured agency management OS template.",
+    "template": "./directus/template",
+    "frontends": {
+      "nuxt": {
+        "name": "Nuxt",
+        "path": "./nuxt"
+      }
+    }
+  },
+  "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017"
+}

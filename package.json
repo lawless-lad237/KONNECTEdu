@@ -1,0 +1,17 @@
+{
+  "name": "agency-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A full-featured agency management OS built with Directus and Nuxt.",
+  "directus:template": {
+    "name": "AgencyOS",
+    "description": "A full-featured agency management OS template.",
+    "template": "./directus/template",
+    "frontends": {
+      "nuxt": {
+        "name": "Nuxt",
+        "path": "./nuxt"
+      }
+    }
+  }
+}
